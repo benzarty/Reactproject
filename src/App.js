@@ -1,30 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import products from "./products.json";
+import "./App.css";
+import Product from "./Component1/Product";
+import styled from "styled-components";
 
 function App() {
-  const menu = (<div>
-    <ul id="nav">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">FAQ</a></li>
-      <li><a href="#">Contact TEST</a></li>
-      <li><a href="#">Contact TEST</a></li>
-
-
-    </ul>
-  </div>
-  );
-
-  const menu2 = [<li>un</li>, <li>deux</li>, <li>trois</li>];
   return (
-
-    <div>
-      {menu}
-      <div>
-        [Page content here]
-      </div>
-    </div>
+    <AppFrame>
+      {products.map((p, index) => (
+        <Product prod={p} key={index}></Product>
+      ))}
+    </AppFrame>
   );
 }
-
+const AppFrame = styled.div`
+  text-align: center;
+  justify-content: center;
+  display: flex;
+`;
 export default App;
