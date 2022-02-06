@@ -7,7 +7,7 @@ function App() {
   return (
     <AppFrame>
       {products.map((p, index) => (
-        <Product prod={p} key={index}></Product>
+        <Product prod={p} key={index}></Product> //hakéké te3adi params prop
       ))}
     </AppFrame>
   );

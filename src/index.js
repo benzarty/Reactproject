@@ -6,7 +6,9 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
 
-// StrictMode :est un outil pour mettre en évidence des problèmes potentiels dans une application. Ne rend aucune interface utilisateur visible.
+  //t7ot scrpits houni
+// StrictMode :est un outil pour mettre en évidence des problèmes potentiels dans une application. Ne rend aucune interface 
+//utilisateur visible.
 // ● Il active des contrôles et deavertissements supplémentaires pour ses descendants.
   <React.StrictMode>
     <App />
