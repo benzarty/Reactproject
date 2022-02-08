@@ -16,10 +16,9 @@ export const Product = (props) => {
         </ProductImageWrapper>
         <ProductInfoWrapper>{props.prod.name}</ProductInfoWrapper>
         <ProductInfoWrapper>{props.prod.price}</ProductInfoWrapper>
-          {/* <h1>{this.props.name}</h1> */}
 
         <p>likes : {props.prod.likes}</p>
-        {/* <button onClick={this.addLikes}>Like</button> */}
+         {/* <button onClick={this.addLikes}>Like</button>  */}
         <ProductInfoWrapper>{props.prod.likes}</ProductInfoWrapper>
       </ProductFrame>
     );
