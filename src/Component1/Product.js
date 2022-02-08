@@ -5,6 +5,24 @@ import React from 'react';
 
 export const Product = () => {
   return <div>
+
+render() {
+    return (
+      
+      <ProductFrame>
+        <ProductImageWrapper>
+          <ProductImage src={this.state.producttt.img}></ProductImage>
+        </ProductImageWrapper>
+        <ProductInfoWrapper>{this.state.producttt.name}</ProductInfoWrapper>
+        <ProductInfoWrapper>{this.state.producttt.price}</ProductInfoWrapper>
+          {/* <h1>{this.props.name}</h1> */}
+
+        <p>likes : {this.state.likes}</p>
+        <button onClick={this.addLikes}>Like</button>
+        <ProductInfoWrapper>{this.state.producttt.likes}</ProductInfoWrapper>
+      </ProductFrame>
+    );
+  }
     
   </div>;
 };
