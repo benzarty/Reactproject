@@ -5,7 +5,18 @@ import React from 'react';
 
 export const Product = () => {
 
-
+  state = {    // te5ali esmeha state
+    producttt: this.props.prod,  //prod howa eli ba3thou min 8adi  //producttt sami chnowa
+    likes: 0,
+    updated: false,
+  };
+  addLikes() {
+    this.setState((previouss) => ({   //setstate methode predefinie
+      likes: previouss.likes + 1,
+      updated: true,
+    }));
+    console.log("stated updated");
+  }
     return (
       
       <ProductFrame>
