@@ -4,9 +4,8 @@ import styled from "styled-components";
 import React from 'react';
 
 export const Product = () => {
-  return <div>
 
-render() {
+
     return (
       
       <ProductFrame>
@@ -22,9 +21,8 @@ render() {
         <ProductInfoWrapper>{this.state.producttt.likes}</ProductInfoWrapper>
       </ProductFrame>
     );
-  }
+  
     
-  </div>;
 };
 
 
