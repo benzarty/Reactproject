@@ -3,40 +3,31 @@ import styled from "styled-components";
 
 import React from 'react';
 
-export const Product = () => {
+export const Product = (props) => {
 
-  state = {    // te5ali esmeha state
-    producttt: this.props.prod,  //prod howa eli ba3thou min 8adi  //producttt sami chnowa
-    likes: 0,
-    updated: false,
-  };
-  addLikes() {
-    this.setState((previouss) => ({   //setstate methode predefinie
-      likes: previouss.likes + 1,
-      updated: true,
-    }));
-    console.log("stated updated");
-  }
+ 
+
+
     return (
       
       <ProductFrame>
         <ProductImageWrapper>
-          <ProductImage src={this.state.producttt.img}></ProductImage>
+          <ProductImage src={props.prod.img}></ProductImage>
         </ProductImageWrapper>
-        <ProductInfoWrapper>{this.state.producttt.name}</ProductInfoWrapper>
-        <ProductInfoWrapper>{this.state.producttt.price}</ProductInfoWrapper>
+        <ProductInfoWrapper>{props.prod.name}</ProductInfoWrapper>
+        <ProductInfoWrapper>{props.prod.price}</ProductInfoWrapper>
           {/* <h1>{this.props.name}</h1> */}
 
-        <p>likes : {this.state.likes}</p>
-        <button onClick={this.addLikes}>Like</button>
-        <ProductInfoWrapper>{this.state.producttt.likes}</ProductInfoWrapper>
+        <p>likes : {props.prod.likes}</p>
+        {/* <button onClick={this.addLikes}>Like</button> */}
+        <ProductInfoWrapper>{props.prod.likes}</ProductInfoWrapper>
       </ProductFrame>
     );
   
     
 };
 
-
+export default Product;
 
 const ProductFrame = styled.div`
   border-radius: 25px;
