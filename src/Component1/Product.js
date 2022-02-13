@@ -1,33 +1,46 @@
 import styled from "styled-components";
 
-
-import React from 'react';
-
-export const Product = (props) => {
-
- 
-
-
-    return (
+// function Product(props) {
+//   return (
       
-      <ProductFrame>
-        <ProductImageWrapper>
-          <ProductImage src={props.prod.img}></ProductImage>
-        </ProductImageWrapper>
-        <ProductInfoWrapper>{props.prod.name}</ProductInfoWrapper>
-        <ProductInfoWrapper>{props.prod.price}</ProductInfoWrapper>
+//     <ProductFrame>
+//       <ProductImageWrapper>
+//         <ProductImage src={props.prod.img}></ProductImage>
+//       </ProductImageWrapper>
+//       <ProductInfoWrapper>{props.prod.name}</ProductInfoWrapper>
+//       <ProductInfoWrapper>{props.prod.price}</ProductInfoWrapper>
 
-        <p>likes : {props.prod.likes}</p>
-         {/* <button onClick={this.addLikes}>Like</button>  */}
-        <ProductInfoWrapper>{props.prod.likes}</ProductInfoWrapper>
-      </ProductFrame>
-    );
-  
+//       <p>likes : {props.prod.likes}</p>
+//        {/* <button onClick={this.addLikes}>Like</button>  */}
+//       <ProductInfoWrapper>{props.prod.likes}</ProductInfoWrapper>
+//     </ProductFrame>
+//   );
+
+//}
+//ffc  1 ere  ecriture wala theniya
+
+const Product = (props) => {
+//sfc
+  return (
     
+    <ProductFrame>
+      <ProductImageWrapper>
+        <ProductImage src={props.prod.img}></ProductImage>
+      </ProductImageWrapper>
+      <ProductInfoWrapper>{props.prod.name}</ProductInfoWrapper>
+      <ProductInfoWrapper>{props.prod.price}</ProductInfoWrapper>
+
+      <p>likes : {props.prod.likes}</p>
+       {/* <button onClick={this.addLikes}>Like</button>  */}
+      <ProductInfoWrapper>{props.prod.likes}</ProductInfoWrapper>
+    </ProductFrame>
+  );
+
+  
 };
 
 export default Product;
-
+ 
 const ProductFrame = styled.div`
   border-radius: 25px;
   min-height: 150px;
@@ -53,3 +66,5 @@ const ProductInfoWrapper = styled.div`
   flex-direction: column;
   & > span {
     text-align: center`;
+
+
