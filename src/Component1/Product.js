@@ -6,8 +6,10 @@ export default class Product extends Component {
 //rconst : constructeur
   constructor(props) {
     super(props);
-    this.addLikes = this.addLikes.bind(this);
+    this.addLikes = this.addLikes.bind(this);  //peut définir plusieurs méthodes qui sont propres à ce dernier.
     //lezem bind bech ya3refha 
+
+  //state te7eb tegdeha fi west constructor wala bara kif kif 
   }
   state = {    // te5ali esmeha state
     producttt: this.props.prod,  //prod howa eli ba3thou min 8adi  //producttt sami chnowa
