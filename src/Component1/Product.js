@@ -1,4 +1,10 @@
+import { useEffect, useState } from "react";
 import styled from "styled-components";
+
+
+
+
+
 
 // function Product(props) {
 //   return (
@@ -21,6 +27,25 @@ import styled from "styled-components";
 
 const Product = (props) => {
 //sfc
+
+const [{number},setColor]=useState({number:0})
+
+
+
+
+useEffect(() => {
+  this.setColor((oldState) => ({
+    number: oldState.number + 1,
+  }));
+  console.log("car le deuxieme argument est color ");
+  return () => {
+    console.log(
+      "cette partie va etre execute pour nettoyer et  lors de loperation unmounting "
+    );
+  };
+}, [number]);
+
+
   return (
     
     <ProductFrame>
@@ -31,7 +56,7 @@ const Product = (props) => {
       <ProductInfoWrapper>{props.prod.price}</ProductInfoWrapper>
 
       <p>likes : {props.prod.likes}</p>
-       {/* <button onClick={this.addLikes}>Like</button>  */}
+       <button onClick={e=>setColor(current=> ({...current,color:e.target.value}))}>Like</button> 
       <ProductInfoWrapper>{props.prod.likes}</ProductInfoWrapper>
     </ProductFrame>
   );
