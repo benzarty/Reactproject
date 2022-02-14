@@ -1,71 +1,34 @@
-import { useEffect, useState } from "react";
 import styled from "styled-components";
 
 
+import React from 'react';
+
+export const Product = (props) => {
 
 
-
-
-// function Product(props) {
-//   return (
+    return (
       
-//     <ProductFrame>
-//       <ProductImageWrapper>
-//         <ProductImage src={props.prod.img}></ProductImage>
-//       </ProductImageWrapper>
-//       <ProductInfoWrapper>{props.prod.name}</ProductInfoWrapper>
-//       <ProductInfoWrapper>{props.prod.price}</ProductInfoWrapper>
+      <ProductFrame>
+        <ProductImageWrapper>
+          <ProductImage src={props.prod.img}></ProductImage>
+        </ProductImageWrapper>
+        <ProductInfoWrapper>{props.prod.name}</ProductInfoWrapper>
+        <ProductInfoWrapper>{props.prod.price}</ProductInfoWrapper>
+      
 
-//       <p>likes : {props.prod.likes}</p>
-//        {/* <button onClick={this.addLikes}>Like</button>  */}
-//       <ProductInfoWrapper>{props.prod.likes}</ProductInfoWrapper>
-//     </ProductFrame>
-//   );
+          {/* <h1>{this.props.name}</h1> */}
 
-//}
-//ffc  1 ere  ecriture wala theniya
-
-const Product = (props) => {
-//sfc
-
-const [{number},setColor]=useState({number:0})
-
-
-
-
-useEffect(() => {
-  this.setColor((oldState) => ({
-    number: oldState.number + 1,
-  }));
-  console.log("car le deuxieme argument est color ");
-  return () => {
-    console.log(
-      "cette partie va etre execute pour nettoyer et  lors de loperation unmounting "
+        <p>likes : {props.prod.likes}</p>
+        {/* <button onClick={this.addLikes}>Like</button> */}
+        <ProductInfoWrapper>{props.prod.likes}</ProductInfoWrapper>
+      </ProductFrame>
     );
-  };
-}, [number]);
-
-
-  return (
-    
-    <ProductFrame>
-      <ProductImageWrapper>
-        <ProductImage src={props.prod.img}></ProductImage>
-      </ProductImageWrapper>
-      <ProductInfoWrapper>{props.prod.name}</ProductInfoWrapper>
-      <ProductInfoWrapper>{props.prod.price}</ProductInfoWrapper>
-
-      <p>likes : {props.prod.likes}</p>
-       <button onClick={e=>setColor(current=> ({...current,color:e.target.value}))}>Like</button> 
-      <ProductInfoWrapper>{props.prod.likes}</ProductInfoWrapper>
-    </ProductFrame>
-  );
-
   
+    
 };
 
 export default Product;
- 
+
 const ProductFrame = styled.div`
   border-radius: 25px;
   min-height: 150px;
@@ -91,5 +54,3 @@ const ProductInfoWrapper = styled.div`
   flex-direction: column;
   & > span {
     text-align: center`;
-
-
